@@ -312,7 +312,7 @@ bindsym $mod+Shift+p exec setxkbmap -layout us -variant intl
 # swap caps and control keys
 exec_always /usr/bin/setxkbmap -option "ctrl:swapcaps"
 
-exec_always xrandr --output HDMI1 --auto --right-of LVDS1
+exec_always xrandr --output HDMI1 --auto --left-of LVDS1
 
 #moving workspace to another monitor
 bindsym $mod+x move workspace to output right
@@ -321,3 +321,5 @@ bindsym $mod+x move workspace to output right
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+
+focus_follows_mouse no
